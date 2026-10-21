@@ -4,343 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre mim | Gustavo</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #e8edf5;
-            background-color: #091525;
-            line-height: 1.7;
-        }
-
-        header {
-            background-color: #0d1d32;
-            border-bottom: 1px solid #203854;
-        }
-
-        .topo {
-            max-width: 1100px;
-            margin: auto;
-            padding: 18px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            color: #ffffff;
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: #3295ff;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #d8e3f1;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav a:hover,
-        nav a.ativo {
-            color: #3295ff;
-        }
-
-        .apresentacao {
-            background: linear-gradient(110deg, #0d1d32, #102b4a);
-            border-bottom: 1px solid #203854;
-        }
-
-        .apresentacao-conteudo {
-            max-width: 1100px;
-            margin: auto;
-            padding: 65px 24px;
-        }
-
-        .destaque {
-            color: #3295ff;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 13px;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: clamp(38px, 6vw, 56px);
-            line-height: 1.2;
-            margin: 12px 0;
-        }
-
-        .apresentacao p {
-            max-width: 700px;
-            font-size: 18px;
-            color: #c4d2e3;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 35px 24px;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        .titulo-secao {
-            color: #ffffff;
-            font-size: 28px;
-            line-height: 1.3;
-            margin: 0 0 20px;
-            border-left: 4px solid #3295ff;
-            padding-left: 14px;
-        }
-
-        .cartao {
-            background-color: #0e1e32;
-            border: 1px solid #223b58;
-            border-radius: 8px;
-            padding: 25px;
-        }
-
-        .cartao p {
-            color: #c4d2e3;
-            margin-top: 0;
-        }
-
-        .cartao p:last-child {
-            margin-bottom: 0;
-        }
-
-        .lista {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 18px;
-        }
-
-        .item {
-            background-color: #0e1e32;
-            border: 1px solid #223b58;
-            border-radius: 8px;
-            padding: 22px;
-        }
-
-        .item h3 {
-            color: #ffffff;
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        .item p {
-            color: #c4d2e3;
-            margin: 0;
-        }
-
-        .botao {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 11px 18px;
-            border-radius: 5px;
-            background-color: #1677e8;
-            border: 1px solid #1677e8;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 14px;
-        }
-
-        .botao:hover {
-            background-color: #0f63c5;
-        }
-
-        footer {
-            background-color: #07111f;
-            border-top: 1px solid #203854;
-            text-align: center;
-            padding: 25px 20px;
-            color: #aebed1;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #65b0ff;
-            text-decoration: none;
-        }
-
-        @media (max-width: 750px) {
-            .topo {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            nav {
-                gap: 15px;
-            }
-
-            .apresentacao-conteudo {
-                padding: 45px 24px;
-            }
-
-            .lista {
-                grid-template-columns: 1fr;
-            }
-
-            .titulo-secao {
-                font-size: 25px;
-            }
-        }
-    </style>
+    <title>Sobre mim - Gustavo</title>
 </head>
-
 <body>
 
     <header>
-        <div class="topo">
-            <a class="logo" href="index.html"><span>&lt;/&gt;</span> Gustavo</a>
-
-            <nav>
-                <a class="ativo" href="index.html">Início</a>
-                <a href="index.html#sobre">Sobre mim</a>
-                <a href="index.html#interesses">Interesses</a>
-                <a href="index.html#contato">Contato</a>
-            </nav>
-        </div>
+        <h1>Mais sobre mim</h1>
+        <p>Conheça um pouco mais sobre meus estudos e interesses.</p>
     </header>
 
-    <section class="apresentacao">
-        <div class="apresentacao-conteudo">
-            <span class="destaque">Um pouco mais sobre mim</span>
-
-            <h1>Sobre mim</h1>
-
-            <p>
-                Conheça um pouco mais da minha trajetória, dos meus interesses
-                e do que estou buscando aprender na área de tecnologia.
-            </p>
-
-            <a class="botao" href="index.html">← Voltar para o início</a>
-        </div>
-    </section>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="index.html#sobre">Sobre mim</a>
+        <a href="index.html#interesses">Meus interesses</a>
+        <a href="index.html#contato">Entre em contato</a>
+    </nav>
 
     <main>
-
         <section>
-            <h2 class="titulo-secao">Minha apresentação</h2>
+            <h2>Quem sou eu</h2>
 
-            <div class="cartao">
-                <p>
-                    Meu nome é Gustavo Lourenço de Paula e sou estudante
-                    de Informática para Internet. Estou desenvolvendo meus
-                    conhecimentos em tecnologia, programação e criação de
-                    páginas web.
-                </p>
+            <p>
+                Meu nome é Gustavo Lourenço de Paula e sou estudante de
+                Informática para Internet. Estou aprendendo sobre tecnologia,
+                programação e desenvolvimento de páginas web.
+            </p>
 
-                <p>
-                    Meu objetivo é continuar aprendendo, colocar em prática
-                    os conteúdos estudados e adquirir experiência para crescer
-                    profissionalmente na área de TI.
-                </p>
-            </div>
+            <p>
+                Quero adquirir novos conhecimentos, desenvolver minhas
+                habilidades e me preparar profissionalmente para atuar na
+                área de tecnologia da informação.
+            </p>
         </section>
 
         <section>
-            <h2 class="titulo-secao">O que gosto de aprender</h2>
+            <h2>Meus interesses</h2>
 
-            <div class="lista">
-                <article class="item">
-                    <h3>Programação e desenvolvimento web</h3>
-                    <p>
-                        Aprender a construir páginas, organizar códigos
-                        e entender como as tecnologias funcionam.
-                    </p>
-                </article>
-
-                <article class="item">
-                    <h3>Novas ferramentas</h3>
-                    <p>
-                        Conhecer recursos digitais que ajudam a desenvolver
-                        projetos e resolver problemas.
-                    </p>
-                </article>
-
-                <article class="item">
-                    <h3>Conhecimento na prática</h3>
-                    <p>
-                        Aplicar o que aprendo no curso em atividades e
-                        projetos pessoais.
-                    </p>
-                </article>
-
-                <article class="item">
-                    <h3>Desenvolvimento profissional</h3>
-                    <p>
-                        Ampliar meus conhecimentos e me preparar para
-                        oportunidades na área de tecnologia.
-                    </p>
-                </article>
-            </div>
+            <ul>
+                <li>Tecnologia e programação.</li>
+                <li>Desenvolvimento de páginas web.</li>
+                <li>Novas ferramentas digitais.</li>
+                <li>Séries e filmes.</li>
+            </ul>
         </section>
 
         <section>
-            <h2 class="titulo-secao">Vamos nos conectar?</h2>
+            <h2>Meus objetivos</h2>
 
-            <div class="cartao">
-                <p>
-                    Você pode conhecer meu perfil profissional pelo LinkedIn.
-                </p>
+            <p>
+                Meu objetivo é continuar estudando, praticar o que aprendo
+                durante o curso e ampliar meus conhecimentos em desenvolvimento
+                web para crescer profissionalmente na área de TI.
+            </p>
+        </section>
 
+        <section>
+            <h2>Meu LinkedIn</h2>
+
+            <p>
                 <a
-                    class="botao"
                     href="https://www.linkedin.com/in/gustavo-l-530330115/"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Acessar meu LinkedIn
+                    Conheça meu perfil profissional no LinkedIn
                 </a>
-
-                <br>
-
-                <a class="botao" href="index.html">
-                    ← Início
-                </a>
-            </div>
+            </p>
         </section>
 
+        <p>
+            <a href="index.html">Voltar para o Início</a>
+        </p>
     </main>
 
     <footer>
         <p>Desenvolvido por Gustavo Lourenço de Paula.</p>
-
-        <p>
-            <a
-                href="https://www.linkedin.com/in/gustavo-l-530330115/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                LinkedIn
-            </a>
-        </p>
     </footer>
 
 </body>
