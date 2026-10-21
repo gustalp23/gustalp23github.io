@@ -4,471 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gustavo | Página Pessoal</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #e8edf5;
-            background-color: #091525;
-            line-height: 1.7;
-        }
-
-        header {
-            background-color: #0d1d32;
-            border-bottom: 1px solid #203854;
-        }
-
-        .topo {
-            max-width: 1100px;
-            margin: auto;
-            padding: 18px 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            color: #ffffff;
-            font-size: 25px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: #3295ff;
-        }
-
-        nav {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #d8e3f1;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        nav a:hover,
-        nav a.ativo {
-            color: #3295ff;
-        }
-
-        .apresentacao {
-            background: linear-gradient(110deg, #0d1d32, #102b4a);
-            border-bottom: 1px solid #203854;
-        }
-
-        .apresentacao-conteudo {
-            max-width: 1100px;
-            margin: auto;
-            padding: 75px 24px;
-        }
-
-        .destaque {
-            color: #3295ff;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 13px;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: clamp(38px, 6vw, 60px);
-            line-height: 1.15;
-            margin: 12px 0;
-        }
-
-        .apresentacao p {
-            max-width: 620px;
-            font-size: 19px;
-            color: #c4d2e3;
-            margin-bottom: 25px;
-        }
-
-        .marcadores {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .marcadores span {
-            border: 1px solid #315578;
-            background-color: #10243c;
-            color: #dce9f8;
-            padding: 7px 13px;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-
-        main {
-            max-width: 1100px;
-            margin: auto;
-            padding: 35px 24px;
-        }
-
-        section.conteudo {
-            margin-bottom: 35px;
-        }
-
-        .titulo-secao {
-            color: #ffffff;
-            font-size: 30px;
-            line-height: 1.3;
-            margin: 0 0 20px;
-            border-left: 4px solid #3295ff;
-            padding-left: 14px;
-        }
-
-        .cartao {
-            background-color: #0e1e32;
-            border: 1px solid #223b58;
-            border-radius: 8px;
-            padding: 25px;
-        }
-
-        .sobre-resumo {
-            display: grid;
-            grid-template-columns: 1.4fr 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .sobre-resumo p {
-            margin-top: 0;
-            color: #c4d2e3;
-        }
-
-        .imagem-programacao {
-            display: block;
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 6px;
-        }
-
-        .botao {
-            display: inline-block;
-            padding: 11px 18px;
-            border-radius: 5px;
-            background-color: #1677e8;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            border: 1px solid #1677e8;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .botao:hover {
-            background-color: #0f63c5;
-        }
-
-        .lista-interesses {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .interesse {
-            background-color: #0e1e32;
-            border: 1px solid #223b58;
-            border-radius: 8px;
-            padding: 22px;
-        }
-
-        .interesse h3 {
-            margin-top: 0;
-            color: #ffffff;
-            font-size: 18px;
-        }
-
-        .interesse p {
-            margin-bottom: 0;
-            color: #c4d2e3;
-        }
-
-        #contato {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 30px;
-            align-items: start;
-            background-color: #10243c;
-            border: 1px solid #294768;
-            border-radius: 8px;
-            padding: 28px;
-        }
-
-        #contato .titulo-secao {
-            margin-bottom: 15px;
-        }
-
-        .texto-contato {
-            color: #c4d2e3;
-        }
-
-        .informacao-contato {
-            color: #dce9f8;
-            margin-top: 25px;
-        }
-
-        .informacao-contato a {
-            color: #65b0ff;
-        }
-
-        #contato form {
-            background-color: #0a192b;
-            border: 1px solid #263f5c;
-            border-radius: 7px;
-            padding: 22px;
-        }
-
-        #contato fieldset {
-            border: 1px solid #34516f;
-            border-radius: 6px;
-            padding: 18px;
-        }
-
-        #contato legend {
-            padding: 0 8px;
-            color: #ffffff;
-            font-weight: bold;
-        }
-
-        #contato label {
-            display: block;
-            color: #e8edf5;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 6px;
-        }
-
-        #contato input,
-        #contato textarea {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #11253d;
-            border: 1px solid #34516f;
-            border-radius: 5px;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
-
-        #contato input::placeholder,
-        #contato textarea::placeholder {
-            color: #9aadc4;
-        }
-
-        #contato input:focus,
-        #contato textarea:focus {
-            outline: 2px solid #3295ff;
-            border-color: #3295ff;
-        }
-
-        #contato textarea {
-            resize: vertical;
-        }
-
-        .campo {
-            margin-bottom: 17px;
-        }
-
-        .botoes {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .botao-limpar {
-            background-color: transparent;
-            border: 1px solid #45617f;
-            color: #e8edf5;
-        }
-
-        .botao-limpar:hover {
-            background-color: #1b3049;
-        }
-
-        footer {
-            background-color: #07111f;
-            border-top: 1px solid #203854;
-            text-align: center;
-            padding: 25px 20px;
-            color: #aebed1;
-            font-size: 14px;
-        }
-
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #65b0ff;
-            text-decoration: none;
-        }
-
-        @media (max-width: 750px) {
-            .topo {
-                align-items: flex-start;
-                flex-direction: column;
-            }
-
-            nav {
-                gap: 15px;
-            }
-
-            .apresentacao-conteudo {
-                padding: 50px 24px;
-            }
-
-            .sobre-resumo,
-            #contato {
-                grid-template-columns: 1fr;
-            }
-
-            .lista-interesses {
-                grid-template-columns: 1fr;
-            }
-
-            .titulo-secao {
-                font-size: 26px;
-            }
-        }
-    </style>
+    <title>Página Pessoal - Gustavo</title>
 </head>
-
-<body id="inicio">
+<body>
 
     <header>
-        <div class="topo">
-            <a class="logo" href="index.html"><span>&lt;/&gt;</span> Gustavo</a>
-
-            <nav>
-                <a class="ativo" href="#inicio">Início</a>
-                <a href="#sobre">Sobre mim</a>
-                <a href="#interesses">Interesses</a>
-                <a href="#contato">Contato</a>
-            </nav>
-        </div>
+        <h1>Olá! Eu sou o Gustavo</h1>
+        <p>Estudante de Informática para Internet e apaixonado por tecnologia.</p>
     </header>
 
-    <section class="apresentacao">
-        <div class="apresentacao-conteudo">
-            <span class="destaque">Página pessoal</span>
-
-            <h1>Olá! Eu sou o Gustavo.</h1>
-
-            <p>
-                Estudante de Informática para Internet e apaixonado por tecnologia.
-                Estou aprendendo sobre programação e desenvolvimento web para
-                construir meu caminho profissional na área de TI.
-            </p>
-
-            <div class="marcadores">
-                <span>Tecnologia</span>
-                <span>Programação</span>
-                <span>Desenvolvimento web</span>
-            </div>
-        </div>
-    </section>
+    <nav>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#interesses">Meus interesses</a>
+        <a href="sobre.html">Mais sobre mim</a>
+        <a href="#contato">Entre em contato</a>
+    </nav>
 
     <main>
+        <section id="sobre">
+            <h2>Sobre mim</h2>
 
-        <section class="conteudo" id="sobre">
-            <h2 class="titulo-secao">Sobre mim</h2>
+            <p>
+                Meu nome é Gustavo, sou estudante de Informática para Internet
+                e estou aprendendo sobre tecnologia, programação e desenvolvimento
+                de páginas web. Quero adquirir novos conhecimentos e me desenvolver
+                profissionalmente na área de TI.
+            </p>
 
-            <div class="cartao sobre-resumo">
-                <div>
-                    <p>
-                        Meu nome é Gustavo, sou estudante de Informática para
-                        Internet e estou aprendendo sobre tecnologia, programação
-                        e desenvolvimento de páginas web. Quero adquirir novos
-                        conhecimentos e me desenvolver profissionalmente na área
-                        de TI.
-                    </p>
-
-                    <a class="botao" href="sobre.html">Conheça mais sobre mim</a>
-                </div>
-
-                <img
-                    class="imagem-programacao"
-                    src="img/o-papel-do-programador-na-definicao-da-estrategia-digital_15aa61961ff3a95c582773cbeaeb5be7.webp"
-                    alt="Imagem ilustrativa sobre programação e tecnologia"
-                >
-            </div>
+            <img
+                src="img/o-papel-do-programador-na-definicao-da-estrategia-digital_15aa61961ff3a95c582773cbeaeb5be7.webp"
+                alt="Imagem ilustrativa para minha página pessoal"
+            >
         </section>
 
-        <section class="conteudo" id="interesses">
-            <h2 class="titulo-secao">Meus interesses</h2>
+        <section id="interesses">
+            <h2>Meus interesses</h2>
 
-            <div class="lista-interesses">
-                <article class="interesse">
-                    <h3>Tecnologia e programação</h3>
-                    <p>
-                        Aprender sobre programação, desenvolvimento de páginas
-                        web e novas ferramentas.
-                    </p>
-                </article>
-
-                <article class="interesse">
-                    <h3>Séries e filmes</h3>
-                    <p>
-                        Assistir a séries e filmes nos momentos livres.
-                    </p>
-                </article>
-
-                <article class="interesse">
-                    <h3>Ferramentas digitais</h3>
-                    <p>
-                        Conhecer ferramentas e recursos que ajudam a resolver
-                        problemas e facilitam o dia a dia.
-                    </p>
-                </article>
-            </div>
+            <ul>
+                <li>Aprender sobre tecnologia e programação.</li>
+                <li>Assistir a séries e filmes.</li>
+                <li>Conhecer novas ferramentas digitais.</li>
+            </ul>
         </section>
 
-        <section class="conteudo" id="contato">
-            <div>
-                <h2 class="titulo-secao">Entre em contato</h2>
-
-                <p class="texto-contato">
-                    Tem alguma dúvida ou sugestão? Preencha o formulário
-                    ao lado para deixar sua mensagem.
-                </p>
-
-                <div class="informacao-contato">
-                    <p><strong>LinkedIn</strong></p>
-                    <a
-                        href="https://www.linkedin.com/in/gustavo-l-530330115/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Acesse meu perfil
-                    </a>
-                </div>
-            </div>
+        <section id="contato">
+            <h2>Entre em contato</h2>
 
             <form action="#" method="post">
                 <fieldset>
-                    <legend>Seus dados e sua mensagem</legend>
+                    <legend>Envie sua mensagem</legend>
 
-                    <div class="campo">
+                    <p>
                         <label for="nome">Nome:</label>
                         <input
                             type="text"
@@ -477,9 +63,9 @@
                             placeholder="Digite seu nome"
                             required
                         >
-                    </div>
+                    </p>
 
-                    <div class="campo">
+                    <p>
                         <label for="email">E-mail:</label>
                         <input
                             type="email"
@@ -488,46 +74,36 @@
                             placeholder="Digite seu e-mail"
                             required
                         >
-                    </div>
+                    </p>
 
-                    <div class="campo">
+                    <p>
                         <label for="assunto">Assunto:</label>
                         <input
                             type="text"
                             id="assunto"
                             name="assunto"
-                            placeholder="Qual é o assunto?"
+                            placeholder="Digite o assunto"
                             required
                         >
-                    </div>
+                    </p>
 
-                    <div class="campo">
-                        <label for="mensagem">Mensagem:</label>
+                    <p>
+                        <label for="mensagem">Mensagem:</label><br>
                         <textarea
                             id="mensagem"
                             name="mensagem"
                             rows="5"
-                            placeholder="Escreva sua mensagem..."
+                            cols="40"
+                            placeholder="Escreva sua mensagem"
                             required
                         ></textarea>
-                    </div>
+                    </p>
 
-                    <div class="botoes">
-                        <button class="botao" type="submit">
-                            Enviar mensagem
-                        </button>
-
-                        <button
-                            class="botao botao-limpar"
-                            type="reset"
-                        >
-                            Limpar campos
-                        </button>
-                    </div>
+                    <button type="submit">Enviar</button>
+                    <button type="reset">Limpar</button>
                 </fieldset>
             </form>
         </section>
-
     </main>
 
     <footer>
@@ -539,7 +115,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                LinkedIn
+                Conheça o meu LinkedIn
             </a>
         </p>
     </footer>
