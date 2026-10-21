@@ -1,42 +1,201 @@
 
-    <section id="contato">
-        <h2>Entre em contato</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Pessoal - Gustavo</title>
 
-        <form action="#" method="post">
-            <fieldset>
-                <legend>Envie sua mensagem</legend>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-                <p>
-                    <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome"
-                           placeholder="Digite seu nome" required>
-                </p>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f0f2f5;
+        }
 
-                <p>
-                    <label for="email">E-mail:</label><br>
-                    <input type="email" id="email" name="email"
-                           placeholder="Digite seu e-mail" required>
-                </p>
+        header {
+            background-color: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
 
-                <p>
-                    <label for="assunto">Assunto:</label><br>
-                    <input type="text" id="assunto" name="assunto"
-                           placeholder="Assunto da mensagem" required>
-                </p>
+        header h1 {
+            margin-top: 0;
+        }
 
-                <p>
-                    <label for="mensagem">Mensagem:</label><br>
-                    <textarea id="mensagem" name="mensagem"
-                              rows="5" cols="40"
-                              placeholder="Escreva sua mensagem"
-                              required></textarea>
-                </p>
+        nav {
+            background-color: #152a45;
+            padding: 15px;
+            text-align: center;
+        }
 
-                <button type="submit">Enviar</button>
-                <button type="reset">Limpar</button>
-            </fieldset>
-        </form>
-    </section>
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        main section {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        h2 {
+            color: #1e3a5f;
+            margin-top: 0;
+        }
+
+        #sobre img {
+            display: block;
+            max-width: 100%;
+            width: 500px;
+            height: auto;
+            margin: 20px auto 0;
+            border-radius: 8px;
+        }
+
+        #interesses ul {
+            padding-left: 25px;
+        }
+
+        /* Formulário de contato */
+
+        #contato {
+            max-width: 700px;
+            margin: 35px auto;
+        }
+
+        #contato > p {
+            color: #555555;
+        }
+
+        #contato fieldset {
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        #contato legend {
+            padding: 0 10px;
+            font-weight: bold;
+            color: #1e3a5f;
+        }
+
+        #contato p {
+            margin-bottom: 18px;
+        }
+
+        #contato label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        #contato input,
+        #contato textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bfc7d1;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        #contato input:focus,
+        #contato textarea:focus {
+            outline: 2px solid #93b4ef;
+            border-color: #2563eb;
+        }
+
+        #contato textarea {
+            resize: vertical;
+        }
+
+        .botoes {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        #contato button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        #contato button[type="submit"] {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        #contato button[type="submit"]:hover {
+            background-color: #1d4ed8;
+        }
+
+        #contato button[type="reset"] {
+            background-color: #e2e8f0;
+            color: #333333;
+        }
+
+        #contato button[type="reset"]:hover {
+            background-color: #cbd5e1;
+        }
+
+        footer {
+            background-color: #152a45;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            margin: 8px 0;
+        }
+
+        footer a {
+            color: #93c5fd;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
+            }
+
+            main section {
+                padding: 18px;
+            }
+
+            #contato fieldset {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
 
 <body>
 
@@ -46,34 +205,119 @@
     </header>
 
     <nav>
-    <a href="#sobre">Sobre mim</a>
-    <a href="#interesses">Meus interesses</a>
-    <a href="sobre.html">Mais sobre mim</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#interesses">Meus interesses</a>
+        <a href="sobre.html">Mais sobre mim</a>
+        <a href="#contato">Entre em contato</a>
     </nav>
 
     <main>
+
         <section id="sobre">
             <h2>Sobre mim</h2>
-            <p>Meu nome é Gustavo, sou estudante de Informática para Internet e estou aprendendo sobre tecnologia, programação e desenvolvimento de páginas web. Quero adquirir novos conhecimentos e me desenvolver profissionalmente na área de TI.</p>
 
-            <img src="img/o-papel-do-programador-na-definicao-da-estrategia-digital_15aa61961ff3a95c582773cbeaeb5be7.webp"  
-                 alt="Imagem ilustrativa para minha página pessoal">
+            <p>
+                Meu nome é Gustavo, sou estudante de Informática para Internet
+                e estou aprendendo sobre tecnologia, programação e desenvolvimento
+                de páginas web. Quero adquirir novos conhecimentos e me desenvolver
+                profissionalmente na área de TI.
+            </p>
+
+            <img
+                src="img/o-papel-do-programador-na-definicao-da-estrategia-digital_15aa61961ff3a95c582773cbeaeb5be7.webp"
+                alt="Imagem ilustrativa sobre programação e tecnologia"
+            >
         </section>
 
         <section id="interesses">
             <h2>Meus interesses</h2>
+
             <ul>
                 <li>Aprender sobre tecnologia e programação.</li>
                 <li>Assistir a séries e filmes.</li>
                 <li>Conhecer novas ferramentas digitais.</li>
             </ul>
         </section>
+
+        <section id="contato">
+            <h2>Entre em contato</h2>
+
+            <p>
+                Tem alguma dúvida ou sugestão?
+                Preencha o formulário abaixo!
+            </p>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Seus dados e sua mensagem</legend>
+
+                    <p>
+                        <label for="nome">Nome:</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="email">E-mail:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="assunto">Assunto:</label>
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            placeholder="Qual é o assunto?"
+                            required
+                        >
+                    </p>
+
+                    <p>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            rows="5"
+                            placeholder="Escreva sua mensagem aqui..."
+                            required
+                        ></textarea>
+                    </p>
+
+                    <div class="botoes">
+                        <button type="submit">Enviar mensagem</button>
+                        <button type="reset">Limpar campos</button>
+                    </div>
+
+                </fieldset>
+
+            </form>
+        </section>
+
     </main>
 
     <footer>
         <p>Desenvolvido por Gustavo Lourenço de Paula.</p>
+
         <p>
-            <a href="https://www.linkedin.com/in/gustavo-l-530330115/" target="_blank">Conheça o Meu LinkedIn
+            <a
+                href="https://www.linkedin.com/in/gustavo-l-530330115/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Conheça o meu LinkedIn
             </a>
         </p>
     </footer>
