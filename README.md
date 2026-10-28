@@ -1,2 +1,1 @@
-<img width="1438" height="820" alt="image" src="https://github.com/user-attachments/assets/9e6aa795-30eb-428b-834d-0e1dd1810335" />
-![Uploading image.png…]()
+<img width="1432" height="900" alt="Captura de tela 2026-10-28 154151" src="https://github.com/user-attachments/assets/c99b36af-531f-41af-9a37-92ef60770c40" />
