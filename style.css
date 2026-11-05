@@ -31,3 +31,20 @@ footer p { margin: 5px 0; }
 footer a { color: #9de9e9; }
 footer a:hover { color: #fff; text-decoration: underline; }
 @media (max-width: 600px) { header { padding: 32px 16px; } header h1 { font-size: 1.8rem; } nav a { margin: 4px 7px; } main { width: 94%; margin: 20px auto; } section { padding: 19px; } fieldset { padding: 15px; } }
+
+/* Atividade: organização geral com CSS Grid */
+body { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto 1fr auto; }
+header, nav, main, footer { grid-column: 1 / -1; }
+main { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-content: start; }
+main > section { min-width: 0; margin-bottom: 0; }
+#sobre, #interesses, #tecnologias, #contato { grid-column: 1 / -1; }
+/* Cartões distribuídos em colunas com Grid */
+.grade-cartoes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+.cartao-tecnologia { display: flex; flex-direction: column; align-items: stretch; gap: 12px; padding: 22px; border: 1px solid #d5e2ea; border-radius: 12px; background: #f7fbfd; box-shadow: 0 3px 10px rgba(18,59,93,.07); }
+.cartao-tecnologia h3 { margin: 0; color: #123b5d; font-size: 1.08rem; line-height: 1.4; }
+.cartao-tecnologia p { margin: 0; flex: 1; line-height: 1.6; }
+.cartao-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: auto; }
+.tag { padding: 4px 10px; border-radius: 999px; background: #dff3f4; color: #135c79; font-size: .82rem; font-weight: bold; }
+.cartao-destaque { grid-column: span 2; background: #edf8fa; border-color: #77cbd0; }
+@media (max-width: 760px) { .grade-cartoes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .grade-cartoes { grid-template-columns: 1fr; } .cartao-destaque { grid-column: auto; } .cartao-tecnologia { padding: 18px; } }
